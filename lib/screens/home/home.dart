@@ -1,5 +1,6 @@
 import 'package:armario/commons/text_style.dart';
 import 'package:armario/screens/explore/explore_details.dart';
+import 'package:armario/screens/explore/explore_grid.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -128,7 +129,17 @@ class _HomeState extends State<Home> {
                         style: headingText(),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExploreGrid(
+                                title: "New Collection",
+                                items: items,
+                              ),
+                            ),
+                          );
+                        },
                         child: Text(
                           "See all",
                           style: buttonText().copyWith(color: _theme.onPrimary),
@@ -182,7 +193,17 @@ class _HomeState extends State<Home> {
                         style: headingText(),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ExploreGrid(
+                                title: "Top Trends",
+                                items: topTrend,
+                              ),
+                            ),
+                          );
+                        },
                         child: Text(
                           "See all",
                           style: buttonText().copyWith(color: _theme.onPrimary),
