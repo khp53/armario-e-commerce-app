@@ -190,6 +190,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Text(
                         "Top Trends",
+                        style: headingText(),
                       ),
                       TextButton(
                         onPressed: () {
